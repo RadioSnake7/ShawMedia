@@ -145,28 +145,29 @@ footer {
 
 /* Two-video side-by-side layout */
 .side-by-side-videos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
   padding: 2rem;
   width: 100%;
-  overflow-x: auto;
+  box-sizing: border-box;
 }
 
 .side-by-side-videos .side-video {
-  flex: 1 0 400px;
-  min-width: 400px;
+  text-align: center;
+  min-width: 0;
 }
 
 .side-by-side-videos .side-video iframe {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  display: block;
+  border: none;
+  border-radius: 8px;
 }
 
+/* Mobile responsiveness */
 @media (max-width: 700px) {
   .side-by-side-videos {
-    flex-direction: column !important;
+    grid-template-columns: 1fr;
   }
-}
