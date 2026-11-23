@@ -145,13 +145,15 @@ footer {
 
 /* Two-video side-by-side layout */
 .side-by-side-videos {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   gap: 24px;
   width: 100%;
 }
 
 .side-by-side-videos .side-video {
+  flex: 1 1 0;
   min-width: 0;
 }
 
@@ -162,18 +164,8 @@ footer {
   border: none;
 }
 
-.side-by-side-videos .side-video h3 {
-  margin: 12px 0 6px;
-}
-
-.side-by-side-videos .side-video p {
-  margin: 0;
-  line-height: 1.5;
-}
-
-/* Mobile responsiveness */
 @media (max-width: 700px) {
   .side-by-side-videos {
-    grid-template-columns: 1fr;
+    flex-direction: column !important;
   }
 }
