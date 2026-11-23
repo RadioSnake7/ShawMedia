@@ -143,8 +143,18 @@ footer {
 }
 
 
-/* Two-video side-by-side layout */
-.side-by-side-videos {
+/* Broadcast page video layout */
+
+.broadcast-video-section {
+  width: 100%;
+  max-width: none;
+  margin: 3rem 0 6rem;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.broadcast-video-section .side-by-side-videos {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
@@ -153,12 +163,12 @@ footer {
   box-sizing: border-box;
 }
 
-.side-by-side-videos .side-video {
-  text-align: center;
+.broadcast-video-section .side-video {
   min-width: 0;
+  text-align: center;
 }
 
-.side-by-side-videos .side-video iframe {
+.broadcast-video-section .side-video iframe {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -166,16 +176,9 @@ footer {
   border-radius: 8px;
 }
 
-/* Mobile responsiveness */
+/* Mobile layout */
 @media (max-width: 700px) {
-  .side-by-side-videos {
+  .broadcast-video-section .side-by-side-videos {
     grid-template-columns: 1fr;
   }
-
-/* Expand broadcast video section */
-.broadcast-video-section {
-  max-width: none;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 3rem 0 6rem;
-  padding: 0;
+}
