@@ -171,3 +171,11 @@ footer {
   .side-by-side-videos {
     grid-template-columns: 1fr;
   }
+
+/* Expand broadcast video section */
+.broadcast-video-section {
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 3rem 0 6rem;
+  padding: 0;
