@@ -148,22 +148,20 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 16px;
+  gap: 20px;
   width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
+  overflow-x: auto;
 }
 
 .side-by-side-videos .side-video {
-  flex: 1 1 0;
-  min-width: 0;
+  flex: 1 0 400px;
+  min-width: 400px;
 }
 
 .side-by-side-videos .side-video iframe {
-  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: none;
+  display: block;
 }
 
 @media (max-width: 700px) {
