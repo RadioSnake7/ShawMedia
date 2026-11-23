@@ -145,11 +145,13 @@ footer {
 
 /* Two-video side-by-side layout */
 .side-by-side-videos {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  gap: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 16px;
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .side-by-side-videos .side-video {
